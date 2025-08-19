@@ -3,7 +3,6 @@
 import { CheckCircle, Users, Calendar, MessageCircle, BookOpen, Target, ArrowRight, Play, Star, Zap, TrendingUp, Award, Clock, DollarSign, Menu, X, ChevronRight, Code, Database, Brain, Briefcase, FileText, Linkedin, Search, Bot, BarChart3, Globe, Shield, Video, Mail, MapPin, ChevronLeft, ChevronRight as ChevronRightIcon } from 'lucide-react'
 import { useState, lazy, Suspense } from 'react'
 import Image from 'next/image'
-import ImmigrantNinjaSection from './components/ImmigrantNinjaSection'
 
 // Types for video testimonials
 interface VideoData {
@@ -16,12 +15,14 @@ interface Category {
   videos: VideoData[];
 }
 
+// const SKOOL_LINK = 'https://www.skool.com/usa-ca-jobs' // REMOVED SKOOL LINK
+
 // Video Testimonials Component
 const VideoTestimonials: React.FC = () => {
   // Group videos by categories so that we can display them in a grid.
   const categories: Category[] = [
     {
-      title: 'Webinars & Community Testimonials',
+      title: 'Webinars & Premium Mentorship Program Testimonials',
       videos: [
         { id: 'zLAvp3htFCc', title: 'Testimonial 1' },
         { id: '6AYHcuSAiT4', title: 'Testimonial 2' },
@@ -99,7 +100,8 @@ export default function LandingPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const handleCTAClick = () => {
-    window.open('https://wa.me/+16504956282', '_blank')
+    // window.open(SKOOL_LINK, '_blank') // CTA COMMENTED OUT
+    console.log('CTA clicked - currently disabled')
   }
 
   const openImageModal = (imageSrc: string) => {
@@ -154,7 +156,7 @@ export default function LandingPage() {
               <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
                 <Target className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">Job Help Community</span>
+              <span className="text-xl font-bold text-gray-900">Premium Mentorship Program</span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
@@ -162,7 +164,7 @@ export default function LandingPage() {
               <a href="#tracks" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Learning Tracks</a>
               <a href="#workshops" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Workshops</a>
               <a href="#results" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Results</a>
-              <button onClick={handleCTAClick} className="btn-primary text-sm">Join Now</button>
+              {/* <button onClick={handleCTAClick} className="btn-primary text-sm">Join Now</button> */}
             </div>
 
             <button 
@@ -182,7 +184,7 @@ export default function LandingPage() {
                 <a href="#tracks" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Learning Tracks</a>
                 <a href="#workshops" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Workshops</a>
                 <a href="#results" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Results</a>
-                <button onClick={handleCTAClick} className="btn-primary text-sm w-full mt-2">Join Now</button>
+                {/* <button onClick={handleCTAClick} className="btn-primary text-sm w-full mt-2">Join Now</button> */}
               </div>
             </div>
           )}
@@ -213,7 +215,7 @@ export default function LandingPage() {
             <div className="text-center space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-black leading-tight">
-                  Join Our Private <span className="text-accent-500">Mentorship Community</span>
+                  Join Our Private <span className="text-accent-500">Premium Mentorship Program</span>
                 </h1>
                 <h2 className="text-2xl lg:text-3xl font-bold text-gray-200">
                   Accelerate Your Career with<br />
@@ -245,7 +247,7 @@ export default function LandingPage() {
                 Get personalized guidance from industry experts and land your dream tech job.
               </p>
 
-                            <div className="space-y-4">
+                            {/* <div className="space-y-4">
                 <button 
                   onClick={handleCTAClick}
                   className="btn-primary text-xl px-8 py-4 mx-auto flex items-center space-x-2"
@@ -253,13 +255,10 @@ export default function LandingPage() {
                   <span>Join Now - Limited Spots Available</span>
                   <ArrowRight className="w-6 h-6" />
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
-
-        {/* Immigrant Ninja Section */}
-        <ImmigrantNinjaSection />
 
         {/* Five Guarantees Section */}
         <section className="section-padding bg-white">
@@ -404,7 +403,7 @@ export default function LandingPage() {
                     </h3>
                     <p className="text-lg text-gray-700">
                       Very detailed resources for making a personalized portfolio, profile, resume templates, cold emailing templates, LinkedIn details. 
-                      When I post in this community, the posts are so detailed - you're going to find every single resource out there.
+                      When I post in this premium mentorship program, the posts are so detailed - you're going to find every single resource out there.
                     </p>
                     <div className="grid md:grid-cols-2 gap-4 mt-6">
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
@@ -470,19 +469,19 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="text-center mt-16 space-y-6">
+            {/* Call to Action - COMMENTED OUT */}
+            {/* <div className="text-center mt-16 space-y-6">
               <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Career?</h3>
-                <p className="text-lg mb-6">We have an amazing community and deal going on. You can cancel at any time.</p>
+                <p className="text-lg mb-6">We have an amazing premium mentorship program and deal going on. You can cancel at any time.</p>
                 <button 
                   onClick={handleCTAClick}
                   className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Join Our Amazing Community Now
+                  Join Our Amazing Premium Mentorship Program Now
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -656,9 +655,9 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="text-center mt-12">
+            {/* <div className="text-center mt-12">
              
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -694,7 +693,7 @@ export default function LandingPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">24/7 Expert Doubt Resolution</h3>
                   <p className="text-gray-600">
-                    Get your doubts resolved anytime by our community of experienced tech professionals.
+                    Get your doubts resolved anytime by our premium mentorship program of experienced tech professionals.
                   </p>
                 </div>
               </div>
@@ -716,9 +715,9 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Users className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Private Community Access</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Private Premium Mentorship Program Access</h3>
                   <p className="text-gray-600">
-                    Connect with peers and mentors in our exclusive community chat for networking opportunities.
+                    Connect with peers and mentors in our exclusive premium mentorship program chat for networking opportunities.
                   </p>
                 </div>
               </div>
@@ -968,7 +967,7 @@ export default function LandingPage() {
         <section className="bg-gray-50 section-padding">
           <div className="max-w-7xl mx-auto text-center space-y-8">
             <h2 className="text-3xl lg:text-5xl font-black text-gray-900">100s of Success Stories Globally</h2>
-            <p className="text-xl text-gray-600">Real testimonials from our community members who transformed their careers</p>
+            <p className="text-xl text-gray-600">Real testimonials from our premium mentorship program members who transformed their careers</p>
             
             {/* Grid of Success Story Images */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12">
@@ -1018,8 +1017,8 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="mt-12 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
+            {/* Call to Action - COMMENTED OUT */}
+            {/* <div className="mt-12 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Ready to Be Our Next Success Story?</h3>
               <p className="text-lg mb-6">Join hundreds of professionals who have transformed their careers with our mentorship</p>
               <button 
@@ -1028,7 +1027,7 @@ export default function LandingPage() {
               >
                 Start Your Success Journey
               </button>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -1064,7 +1063,7 @@ export default function LandingPage() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span>Private community chat access</span>
+                  <span>Private premium mentorship program chat access</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -1080,7 +1079,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="space-y-6">
+            {/* <div className="space-y-6">
               <button 
                 onClick={handleCTAClick}
                 className="btn-primary text-2xl px-12 py-6 mx-auto flex items-center space-x-3"
@@ -1088,11 +1087,11 @@ export default function LandingPage() {
                 <span>Join Now</span>
                 <ArrowRight className="w-8 h-8" />
               </button>
-            </div>
+            </div> */}
 
             {/* Who Can Join */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mt-12">
-              <h3 className="text-2xl font-bold mb-6">Who Can Join Job Help Community?</h3>
+              <h3 className="text-2xl font-bold mb-6">Who Can Join Premium Mentorship Program?</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-3">
@@ -1135,7 +1134,7 @@ export default function LandingPage() {
 
             <div className="border-t border-white/20 pt-8">
               <p className="text-sm text-gray-400">
-                © 2024 Job Help Community. Your gateway to tech success with personalized mentorship from industry leaders.
+                © 2024 Premium Mentorship Program. Your gateway to tech success with personalized mentorship from industry leaders.
               </p>
             </div>
           </div>
