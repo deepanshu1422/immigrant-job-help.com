@@ -1,6 +1,6 @@
-# Skool Community Landing Page
+# Mentor Page Landing Page
 
-A high-converting landing page built with Next.js to promote the "Jobs, Courses, AI, Mentorship" Skool community. This landing page follows Alex Hormozi's proven conversion principles to maximize sign-ups.
+A high-converting landing page built with Next.js to promote mentorship services. This landing page follows proven conversion principles to maximize sign-ups and includes an Immigrant Ninja-style component for job search services.
 
 ## 🚀 Features
 
@@ -70,10 +70,10 @@ Update the content in `app/page.tsx`:
 - Pricing information
 - Member counts
 
-### Skool Link
-The Skool community link is defined at the top of `app/page.tsx`:
+### WhatsApp Contact
+The WhatsApp contact link is defined in the components:
 ```javascript
-const SKOOL_LINK = 'https://www.skool.com/usa-ca-jobs'
+window.open('https://wa.me/+16504956282', '_blank')
 ```
 
 ## 📱 Responsive Design
@@ -139,7 +139,7 @@ mentor-page/
 Consider adding analytics to track conversion rates:
 - Google Analytics
 - Facebook Pixel
-- Conversion tracking for the Skool link clicks
+- Conversion tracking for WhatsApp link clicks
 
 ## 🤝 Support
 
@@ -147,4 +147,4 @@ For questions or customizations, refer to the Next.js documentation or Tailwind 
 
 ## 📄 License
 
-This project is for the Skool community landing page. All rights reserved. # immigrant-job-help.com
+This project is for the mentor page landing page. All rights reserved.

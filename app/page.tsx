@@ -3,6 +3,7 @@
 import { CheckCircle, Users, Calendar, MessageCircle, BookOpen, Target, ArrowRight, Play, Star, Zap, TrendingUp, Award, Clock, DollarSign, Menu, X, ChevronRight, Code, Database, Brain, Briefcase, FileText, Linkedin, Search, Bot, BarChart3, Globe, Shield, Video, Mail, MapPin, ChevronLeft, ChevronRight as ChevronRightIcon } from 'lucide-react'
 import { useState, lazy, Suspense } from 'react'
 import Image from 'next/image'
+import ImmigrantNinjaSection from './components/ImmigrantNinjaSection'
 
 // Types for video testimonials
 interface VideoData {
@@ -14,8 +15,6 @@ interface Category {
   title: string;
   videos: VideoData[];
 }
-
-const SKOOL_LINK = 'https://www.skool.com/usa-ca-jobs'
 
 // Video Testimonials Component
 const VideoTestimonials: React.FC = () => {
@@ -100,7 +99,7 @@ export default function LandingPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const handleCTAClick = () => {
-    window.open(SKOOL_LINK, '_blank')
+    window.open('https://wa.me/+16504956282', '_blank')
   }
 
   const openImageModal = (imageSrc: string) => {
@@ -258,6 +257,9 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        {/* Immigrant Ninja Section */}
+        <ImmigrantNinjaSection />
 
         {/* Five Guarantees Section */}
         <section className="section-padding bg-white">
