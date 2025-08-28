@@ -1,8 +1,9 @@
 'use client'
 
 import { CheckCircle, Users, Calendar, MessageCircle, BookOpen, Target, ArrowRight, Play, Star, Zap, TrendingUp, Award, Clock, DollarSign, Menu, X, ChevronRight, Code, Database, Brain, Briefcase, FileText, Linkedin, Search, Bot, BarChart3, Globe, Shield, Video, Mail, MapPin, ChevronLeft, ChevronRight as ChevronRightIcon } from 'lucide-react'
-import { useState, lazy, Suspense } from 'react'
+import { useState, lazy, Suspense, useEffect } from 'react'
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
 
 // Types for video testimonials
 interface VideoData {
@@ -15,7 +16,8 @@ interface Category {
   videos: VideoData[];
 }
 
-const SKOOL_LINK = 'https://www.skool.com/usa-ca-jobs'
+const DEFAULT_SKOOL_LINK = 'https://www.skool.com/usa-ca-jobs'
+const INDIA_CHECKOUT_LINK = 'https://courses.skillsetmaster.com/web/checkout/68255940ba32f8a92f479b34'
 
 // Video Testimonials Component
 const VideoTestimonials: React.FC = () => {
@@ -108,9 +110,20 @@ const VideoTestimonials: React.FC = () => {
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [redirectUrl, setRedirectUrl] = useState(DEFAULT_SKOOL_LINK)
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    const country = searchParams.get('country')
+    if (country === 'in') {
+      setRedirectUrl(INDIA_CHECKOUT_LINK)
+    } else {
+      setRedirectUrl(DEFAULT_SKOOL_LINK)
+    }
+  }, [searchParams])
 
   const handleCTAClick = () => {
-    window.open(SKOOL_LINK, '_blank')
+    window.open(redirectUrl, '_blank')
   }
 
   const openImageModal = (imageSrc: string) => {
