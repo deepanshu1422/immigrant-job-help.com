@@ -22,6 +22,16 @@ const VideoTestimonials: React.FC = () => {
   // Group videos by categories so that we can display them in a grid.
   const categories: Category[] = [
     {
+      title: 'Latest Job Success Stories',
+      videos: [
+        { id: 'VmZIF-qzItM', title: 'Latest Job Success 1' },
+        { id: 'e0XzrdXvOU8', title: 'Latest Job Success 2' },
+        { id: '3Gagdr1l7hk', title: 'Latest Job Success 3' },
+        { id: 'YJROZfZs6sI', title: 'Latest Job Success 4' },
+        { id: '7O6Vdh6aRQI', title: 'Latest Job Success 5' },
+      ],
+    },
+    {
       title: 'Webinars & Premium Mentorship Program Testimonials',
       videos: [
         { id: 'zLAvp3htFCc', title: 'Testimonial 1' },
@@ -283,35 +293,47 @@ export default function LandingPage() {
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
-                      10+ Job-Ready Skills Training Programs
+                      Complete Job Hunt Support System
                     </h3>
                     <p className="text-lg text-gray-700">
-                      Master the exact technical skills that employers are hiring for right now. Every course is designed to make you job-ready and interview-confident.
+                      Get everything you need to land your dream job. From personalized coaching to proven templates - we've got your entire job hunt covered.
                     </p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                        <div className="font-semibold text-primary-700">🤖 AI Landing Pages</div>
-                        <div className="text-sm text-gray-600">Complete AI integration guide</div>
+                        <div className="font-semibold text-primary-700">🎯 Job Hunt Mastery</div>
+                        <div className="text-sm text-gray-600">End-to-end job landing strategy</div>
                       </div>
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                        <div className="font-semibold text-primary-700">🚀 AI SaaS Development</div>
-                        <div className="text-sm text-gray-600">Build profitable AI SaaS products</div>
+                        <div className="font-semibold text-primary-700">📄 Resume Mastery</div>
+                        <div className="text-sm text-gray-600">ATS-beating resumes that get interviews</div>
                       </div>
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                        <div className="font-semibold text-primary-700">💻 AI Coding & Tools</div>
-                        <div className="text-sm text-gray-600">AI-powered development workflow</div>
+                        <div className="font-semibold text-primary-700">✉️ Cold Email Mastery</div>
+                        <div className="text-sm text-gray-600">80%+ response rate email templates</div>
                       </div>
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                         <div className="font-semibold text-primary-700">🔗 LinkedIn Mastery</div>
-                        <div className="text-sm text-gray-600">Detailed 10-step course for job seekers</div>
+                        <div className="text-sm text-gray-600">Turn LinkedIn into your job magnet</div>
                       </div>
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                        <div className="font-semibold text-primary-700">⚡ AI Automations</div>
-                        <div className="text-sm text-gray-600">Streamline your workflow with AI</div>
+                        <div className="font-semibold text-primary-700">💬 24/7 DM Support</div>
+                        <div className="text-sm text-gray-600">Direct access to job hunt experts</div>
                       </div>
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                        <div className="font-semibold text-primary-700">📊 Data Analytics</div>
-                        <div className="text-sm text-gray-600">Complete data science bootcamp</div>
+                        <div className="font-semibold text-primary-700">👨‍🏫 Personal Mentors</div>
+                        <div className="text-sm text-gray-600">1-on-1 guidance from FAANG engineers</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                        <div className="font-semibold text-primary-700">🎯 Interview Mastery</div>
+                        <div className="text-sm text-gray-600">Ace any interview with confidence</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                        <div className="font-semibold text-primary-700">💰 Salary Negotiation</div>
+                        <div className="text-sm text-gray-600">Negotiate 20-40% higher offers</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                        <div className="font-semibold text-primary-700">📊 Application Tracking</div>
+                        <div className="text-sm text-gray-600">Never miss a follow-up opportunity</div>
                       </div>
                     </div>
                   </div>
@@ -958,6 +980,50 @@ export default function LandingPage() {
             </div>
             
            
+          </div>
+        </section>
+
+        {/* New WhatsApp Testimonials */}
+        <section className="bg-white section-padding">
+          <div className="max-w-7xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl lg:text-5xl font-black text-gray-900">Latest Success Stories</h2>
+            <p className="text-xl text-gray-600">Recent job offers and career wins from our community members</p>
+            
+            {/* Grid of New Testimonial Images */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12">
+              {[
+                'WhatsApp Image 2025-08-28 at 10.49.46.jpeg',
+                'WhatsApp Image 2025-08-28 at 10.49.46 (1).jpeg',
+                'WhatsApp Image 2025-08-28 at 10.49.46 (2).jpeg',
+                'WhatsApp Image 2025-08-28 at 10.49.46 (3).jpeg',
+                'WhatsApp Image 2025-08-28 at 10.49.46 (4).jpeg',
+                'WhatsApp Image 2025-08-28 at 10.49.46 (5).jpeg',
+                'WhatsApp Image 2025-08-28 at 10.49.46 (6).jpeg',
+                'WhatsApp Image 2025-08-28 at 10.49.47.jpeg',
+                'WhatsApp Image 2025-08-28 at 10.49.47 (1).jpeg',
+                'WhatsApp Image 2025-08-28 at 10.49.47 (2).jpeg',
+                'WhatsApp Image 2025-08-28 at 10.49.47 (3).jpeg'
+              ].map((imageName, i) => (
+                <div 
+                  key={i} 
+                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer border border-gray-100"
+                  onClick={() => openImageModal(`/new-testimonials/${imageName}`)}
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <Image
+                      src={`/new-testimonials/${imageName}`}
+                      alt={`Latest Success Story ${i + 1}`}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
