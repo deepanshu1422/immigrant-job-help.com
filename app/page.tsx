@@ -15,7 +15,7 @@ interface Category {
   videos: VideoData[];
 }
 
-// const SKOOL_LINK = 'https://www.skool.com/usa-ca-jobs' // REMOVED SKOOL LINK
+const SKOOL_LINK = 'https://www.skool.com/usa-ca-jobs'
 
 // Video Testimonials Component
 const VideoTestimonials: React.FC = () => {
@@ -100,8 +100,7 @@ export default function LandingPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const handleCTAClick = () => {
-    // window.open(SKOOL_LINK, '_blank') // CTA COMMENTED OUT
-    console.log('CTA clicked - currently disabled')
+    window.open(SKOOL_LINK, '_blank')
   }
 
   const openImageModal = (imageSrc: string) => {
@@ -156,15 +155,15 @@ export default function LandingPage() {
               <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
                 <Target className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">Premium Mentorship Program</span>
+              <span className="text-xl font-bold text-gray-900">Elite Job Hunt Program</span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Features</a>
-              <a href="#tracks" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Learning Tracks</a>
-              <a href="#workshops" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Workshops</a>
-              <a href="#results" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Results</a>
-              {/* <button onClick={handleCTAClick} className="btn-primary text-sm">Join Now</button> */}
+              <a href="#features" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Job Hunt Features</a>
+              <a href="#tracks" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Skill Building</a>
+              <a href="#workshops" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Live Training</a>
+              <a href="#results" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">Success Stories</a>
+              <button onClick={handleCTAClick} className="btn-primary text-sm">Join Now</button>
             </div>
 
             <button 
@@ -180,11 +179,11 @@ export default function LandingPage() {
                   {isMenuOpen && (
             <div className="md:hidden bg-white border-t border-gray-200">
               <div className="px-4 py-2 space-y-2">
-                <a href="#features" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Features</a>
-                <a href="#tracks" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Learning Tracks</a>
-                <a href="#workshops" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Workshops</a>
-                <a href="#results" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Results</a>
-                {/* <button onClick={handleCTAClick} className="btn-primary text-sm w-full mt-2">Join Now</button> */}
+                <a href="#features" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Job Hunt Features</a>
+                <a href="#tracks" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Skill Building</a>
+                <a href="#workshops" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Live Training</a>
+                <a href="#results" className="block py-2 text-gray-700 hover:text-primary-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Success Stories</a>
+                <button onClick={handleCTAClick} className="btn-primary text-sm w-full mt-2">Join Now</button>
               </div>
             </div>
           )}
@@ -215,11 +214,11 @@ export default function LandingPage() {
             <div className="text-center space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-black leading-tight">
-                  Join Our Private <span className="text-accent-500">Premium Mentorship Program</span>
+                  Join Our Private <span className="text-accent-500">Elite Job Hunt Program</span>
                 </h1>
                 <h2 className="text-2xl lg:text-3xl font-bold text-gray-200">
-                  Accelerate Your Career with<br />
-                  <span className="text-accent-500">1:1 Mentorship, Live Workshops, AI training & 10+ courses</span>
+                  Land Your Dream Tech Job with<br />
+                  <span className="text-accent-500">End-to-End Job Hunt Support, Live Training & Expert Guidance</span>
                 </h2>
               </div>
 
@@ -243,11 +242,11 @@ export default function LandingPage() {
               </div>
 
               <p className="text-xl text-gray-200 max-w-4xl mx-auto">
-                Join thousands of professionals who've accelerated their careers with our proven mentorship program. 
-                Get personalized guidance from industry experts and land your dream tech job.
+                Join thousands of job seekers who've successfully landed high-paying tech roles through our proven job hunt system. 
+                Get complete end-to-end support from application to offer letter.
               </p>
 
-                            {/* <div className="space-y-4">
+              <div className="space-y-4">
                 <button 
                   onClick={handleCTAClick}
                   className="btn-primary text-xl px-8 py-4 mx-auto flex items-center space-x-2"
@@ -255,7 +254,7 @@ export default function LandingPage() {
                   <span>Join Now - Limited Spots Available</span>
                   <ArrowRight className="w-6 h-6" />
                 </button>
-              </div> */}
+              </div>
             </div>
           </div>
         </section>
@@ -265,11 +264,11 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-8 mb-16">
               <h2 className="text-3xl lg:text-5xl font-black text-gray-900">
-                5 Guarantees When You <span className="text-primary-700">Join Our Mentorship</span>
+                5 Guarantees When You <span className="text-primary-700">Join Our Job Hunt Program</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                These are the five guarantees I'm giving you when you join our mentorship group. 
-                There is absolutely nothing better than this in the market and I can guarantee you that.
+                These are the five guarantees I'm giving you when you join our elite job hunt program. 
+                This is the most comprehensive job landing system in the market and I guarantee your success.
               </p>
             </div>
 
@@ -284,10 +283,10 @@ export default function LandingPage() {
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
-                      10+ In-Depth & Updated Courses
+                      10+ Job-Ready Skills Training Programs
                     </h3>
                     <p className="text-lg text-gray-700">
-                      The classroom is full of really exciting updates and very in-depth courses. Anything that you look at is going to be very detailed and updated.
+                      Master the exact technical skills that employers are hiring for right now. Every course is designed to make you job-ready and interview-confident.
                     </p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
@@ -329,27 +328,27 @@ export default function LandingPage() {
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
-                      One-on-One Help & Mentorship
+                      Personal Job Hunt Coaching & Support
                     </h3>
                     <p className="text-lg text-gray-700">
-                      Personal help is provided by mentors and me myself. Anything and everything that will help you land a high-paying job.
+                      Get direct access to industry experts who will personally guide your job search. From resume optimization to interview prep - we've got you covered.
                     </p>
                     <div className="grid md:grid-cols-2 gap-6 mt-6">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-green-600" />
-                        <span className="text-gray-700">Weekly Q&A Sessions</span>
+                        <span className="text-gray-700">Weekly Job Search Strategy Sessions</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-green-600" />
-                        <span className="text-gray-700">Direct DM Access to Mentors</span>
+                        <span className="text-gray-700">Direct Access to Job Hunt Coaches</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-green-600" />
-                        <span className="text-gray-700">Live Interactive Workshops</span>
+                        <span className="text-gray-700">Live Interview Practice Sessions</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-green-600" />
-                        <span className="text-gray-700">Personal Career Roadmaps</span>
+                        <span className="text-gray-700">Personalized Job Landing Roadmaps</span>
                       </div>
                     </div>
                   </div>
@@ -369,7 +368,7 @@ export default function LandingPage() {
                       Fresh Job Postings Every Week
                     </h3>
                     <p className="text-lg text-gray-700">
-                      I post new jobs every single week. Jobs in tech, non-tech, marketing, product manager roles, software engineering, data analytics, program management - anything and everything that is out there in the market.
+                      Every week, I personally curate and share the best job opportunities across tech, data, AI, product management, and engineering. Get first access to hidden job markets before they go public.
                     </p>
                     <div className="grid md:grid-cols-3 gap-4 mt-6">
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 text-center">
@@ -402,8 +401,8 @@ export default function LandingPage() {
                       Detailed Resources & Templates
                     </h3>
                     <p className="text-lg text-gray-700">
-                      Very detailed resources for making a personalized portfolio, profile, resume templates, cold emailing templates, LinkedIn details. 
-                      When I post in this premium mentorship program, the posts are so detailed - you're going to find every single resource out there.
+                      Get battle-tested templates and resources that actually work. From ATS-beating resumes to cold emails with 80%+ response rates. 
+                      These are the exact resources that have helped thousands land their dream jobs.
                     </p>
                     <div className="grid md:grid-cols-2 gap-4 mt-6">
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
@@ -441,11 +440,11 @@ export default function LandingPage() {
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
-                      Weekly Live Workshops with Me
+                      Weekly Live Job Hunt Workshops
                     </h3>
                     <p className="text-lg text-gray-700">
-                      These are absolutely amazing workshops we have every week. We cover jobs, resume, LinkedIn, cold emailing, AI, lots of projects, 
-                      and practical learning. I am guaranteeing you that you are going to love this mentorship group.
+                      Join our intensive weekly workshops where we practice real job interviews, optimize resumes live, and build job-winning projects. 
+                      These hands-on sessions are guaranteed to accelerate your job search by months.
                     </p>
                     <div className="grid md:grid-cols-3 gap-4 mt-6">
                       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
@@ -469,19 +468,18 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Call to Action - COMMENTED OUT */}
-            {/* <div className="text-center mt-16 space-y-6">
+            <div className="text-center mt-16 space-y-6">
               <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Career?</h3>
-                <p className="text-lg mb-6">We have an amazing premium mentorship program and deal going on. You can cancel at any time.</p>
+                <h3 className="text-2xl font-bold mb-4">Ready to Land Your Dream Job?</h3>
+                <p className="text-lg mb-6">Join our elite job hunt program with proven strategies and guaranteed results. You can cancel at any time.</p>
                 <button 
                   onClick={handleCTAClick}
                   className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Join Our Amazing Premium Mentorship Program Now
+                  Join Our Elite Job Hunt Program Now
                 </button>
               </div>
-            </div> */}
+            </div>
           </div>
         </section>
 
@@ -489,8 +487,8 @@ export default function LandingPage() {
         <section id="workshops" className="bg-gray-50 section-padding">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-8 mb-16">
-              <h2 className="text-3xl lg:text-5xl font-black text-gray-900">Weekly Live Workshops</h2>
-              <p className="text-xl text-gray-600">Calendar illustrating weekly live workshops schedule</p>
+              <h2 className="text-3xl lg:text-5xl font-black text-gray-900">Weekly Live Job Hunt Workshops</h2>
+              <p className="text-xl text-gray-600">Intensive hands-on training sessions to master every aspect of your job search</p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
@@ -499,8 +497,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Bot className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">AI-Powered Job Search Techniques</h3>
-                  <p className="text-gray-600">Learn how to leverage AI tools to automate and enhance your job search process.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">AI-Powered Job Application Automation</h3>
+                  <p className="text-gray-600">Master AI tools to apply to 100+ jobs per day while maintaining personalization and quality.</p>
                   <div className="space-y-2">
                     <div className="text-sm text-gray-500">{workshopDates[0].date}</div>
                     <div className="text-sm font-semibold text-primary-600">{workshopDates[0].attending} attending</div>
@@ -513,8 +511,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <FileText className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Resume Building & Cold Outreach</h3>
-                  <p className="text-gray-600">Create an ATS-optimized resume and master the art of cold emailing hiring managers.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">ATS-Beating Resume & Direct Outreach</h3>
+                  <p className="text-gray-600">Build resumes that pass ATS systems and write cold emails that get 80%+ response rates from hiring managers.</p>
                   <div className="space-y-2">
                     <div className="text-sm text-gray-500">{workshopDates[1].date}</div>
                     <div className="text-sm font-semibold text-primary-600">{workshopDates[1].attending} attending</div>
@@ -527,8 +525,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Linkedin className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">LinkedIn Profile Optimization</h3>
-                  <p className="text-gray-600">Optimize your LinkedIn profile to attract recruiters and stand out in the tech industry.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">LinkedIn Job Hunting Mastery</h3>
+                  <p className="text-gray-600">Transform your LinkedIn into a recruiter magnet and use it as your #1 job hunting weapon.</p>
                   <div className="space-y-2">
                     <div className="text-sm text-gray-500">{workshopDates[2].date}</div>
                     <div className="text-sm font-semibold text-primary-600">{workshopDates[2].attending} attending</div>
@@ -541,8 +539,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Code className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Project Portfolio Development</h3>
-                  <p className="text-gray-600">Build impressive projects that showcase your skills and attract potential employers.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Job-Winning Portfolio Projects</h3>
+                  <p className="text-gray-600">Create portfolio projects that directly lead to job offers and set you apart from 99% of candidates.</p>
                   <div className="space-y-2">
                     <div className="text-sm text-gray-500">{workshopDates[3].date}</div>
                     <div className="text-sm font-semibold text-primary-600">{workshopDates[3].attending} attending</div>
@@ -555,8 +553,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <MessageCircle className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Technical Interview Preparation</h3>
-                  <p className="text-gray-600">Practice coding interviews with peers and receive feedback from experienced mentors.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Interview Mastery & Salary Negotiation</h3>
+                  <p className="text-gray-600">Master both technical and behavioral interviews, then negotiate offers like a pro to maximize your compensation.</p>
                   <div className="space-y-2">
                     <div className="text-sm text-gray-500">{workshopDates[4].date}</div>
                     <div className="text-sm font-semibold text-primary-600">{workshopDates[4].attending} attending</div>
@@ -569,8 +567,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Globe className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">SaaS Development with AI Integration</h3>
-                  <p className="text-gray-600">Learn to build modern SaaS applications with integrated AI capabilities.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Build Hire-Worthy AI Projects</h3>
+                  <p className="text-gray-600">Create impressive AI-powered applications that demonstrate cutting-edge skills employers are desperately seeking.</p>
                   <div className="space-y-2">
                     <div className="text-sm text-gray-500">{workshopDates[5].date}</div>
                     <div className="text-sm font-semibold text-primary-600">{workshopDates[5].attending} attending</div>
@@ -586,10 +584,10 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-8 mb-16">
               <h2 className="text-3xl lg:text-5xl font-black text-gray-900">
-                Upskill With <span className="text-primary-700">AI Courses & Live Workshops</span>
+                Master <span className="text-primary-700">Job-Ready Skills & Live Training</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                Learn end-to-end AI tooling and workflows to build SaaS, apps, websites and automations that get results.
+                Build the exact technical skills that employers are hiring for right now. Every course is designed to make you job-ready and interview-confident.
               </p>
             </div>
 
@@ -599,8 +597,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Globe className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">AI SaaS From Scratch</h3>
-                  <p className="text-gray-600">Build & deploy profitable AI SaaS products without prior ML knowledge.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Job-Winning AI Projects</h3>
+                  <p className="text-gray-600">Build impressive AI applications that demonstrate cutting-edge skills employers desperately need.</p>
                 </div>
               </div>
 
@@ -609,8 +607,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Zap className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">No-Code Automations</h3>
-                  <p className="text-gray-600">Automate repetitive tasks across apps like Notion, Slack & Webflow using AI.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Productivity Automations</h3>
+                  <p className="text-gray-600">Master automation tools that make you 10x more productive than other candidates.</p>
                 </div>
               </div>
 
@@ -619,8 +617,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <BarChart3 className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">AI Analytics Dashboards</h3>
-                  <p className="text-gray-600">Create real-time dashboards & reports powered by LLMs and vector databases.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Data Skills for Every Role</h3>
+                  <p className="text-gray-600">Build analytics dashboards and data visualizations that wow employers in every industry.</p>
                 </div>
               </div>
 
@@ -629,8 +627,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Code className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">AI-First Web Apps</h3>
-                  <p className="text-gray-600">Learn full-stack patterns to integrate GPT, Vision & Speech APIs at scale.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Modern Web Development</h3>
+                  <p className="text-gray-600">Build full-stack applications with the latest technologies that companies actually use.</p>
                 </div>
               </div>
 
@@ -639,8 +637,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Brain className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Prompt Engineering Mastery</h3>
-                  <p className="text-gray-600">Craft robust, context-aware prompts that drive consistent & accurate outputs.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">AI Skills for Every Job</h3>
+                  <p className="text-gray-600">Master AI tools and techniques that make you irreplaceable in any tech role.</p>
                 </div>
               </div>
 
@@ -649,8 +647,8 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Target className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Workflow Orchestration</h3>
-                  <p className="text-gray-600">Chain multiple AI services & tools together to build complex workflows.</p>
+                  <h3 className="text-2xl font-bold text-gray-900">System Design & Architecture</h3>
+                  <p className="text-gray-600">Learn to design scalable systems that impress interviewers and land senior roles.</p>
                 </div>
               </div>
             </div>
@@ -666,10 +664,10 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-8 mb-16">
               <h2 className="text-3xl lg:text-5xl font-black text-gray-900">
-                Exclusive Features
+                Elite Job Hunt Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Get access to premium resources and support designed to accelerate your tech career growth.
+                Get access to premium job hunting resources and support designed to land you high-paying tech roles faster.
               </p>
             </div>
 
@@ -679,9 +677,9 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <MessageCircle className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Weekly Live Q&A Sessions</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Weekly Job Hunt Strategy Sessions</h3>
                   <p className="text-gray-600">
-                    Join interactive sessions with FAANG Engineers to get all your technical questions answered.
+                    Get your job search questions answered by FAANG engineers who've been through the hiring process.
                   </p>
                 </div>
               </div>
@@ -691,9 +689,9 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Clock className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">24/7 Expert Doubt Resolution</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">24/7 Job Hunt Support</h3>
                   <p className="text-gray-600">
-                    Get your doubts resolved anytime by our premium mentorship program of experienced tech professionals.
+                    Get instant help with resumes, applications, interviews, and negotiations from our job hunt experts.
                   </p>
                 </div>
               </div>
@@ -703,9 +701,9 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <FileText className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Professional Resume Reviews</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Resume Reviews by Actual Hiring Managers</h3>
                   <p className="text-gray-600">
-                    Receive detailed feedback on your resume from hiring managers and tech recruiters.
+                    Get your resume reviewed by real hiring managers who know exactly what gets candidates hired.
                   </p>
                 </div>
               </div>
@@ -715,9 +713,9 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Users className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Private Premium Mentorship Program Access</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Private Job Hunt Community Access</h3>
                   <p className="text-gray-600">
-                    Connect with peers and mentors in our exclusive premium mentorship program chat for networking opportunities.
+                    Network with successful job hunters and get referrals through our exclusive community of tech professionals.
                   </p>
                 </div>
               </div>
@@ -727,9 +725,9 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Target className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Personalized Career Guidance</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Personalized Job Landing Strategy</h3>
                   <p className="text-gray-600">
-                    Get customized roadmaps and strategies tailored to your specific career goals.
+                    Get a custom job hunt roadmap tailored to your target roles and current skill level.
                   </p>
                 </div>
               </div>
@@ -739,9 +737,9 @@ export default function LandingPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
                     <Award className="w-8 h-8 text-primary-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Weekly Sessions with FAANG Engineers</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Weekly Sessions with FAANG Hiring Insiders</h3>
                   <p className="text-gray-600">
-                    Learn insider tips and strategies directly from engineers at top tech companies.
+                    Get insider knowledge of hiring processes and what actually gets you hired at top companies.
                   </p>
                 </div>
               </div>
@@ -790,53 +788,53 @@ export default function LandingPage() {
         <section className="bg-primary-50 section-padding">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-8 mb-16">
-              <h2 className="text-3xl lg:text-5xl font-black text-gray-900">10+ Detailed Courses included</h2>
-              <p className="text-xl text-gray-600">Master both technical skills and career development strategies with our specialized learning paths.</p>
+              <h2 className="text-3xl lg:text-5xl font-black text-gray-900">10+ Job-Ready Training Programs</h2>
+              <p className="text-xl text-gray-600">Master the exact skills that get you hired with our proven job-focused training programs.</p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Technical Excellence */}
               <div className="space-y-8">
-                <h3 className="text-3xl font-bold text-gray-900 text-center">Technical Excellence</h3>
+                <h3 className="text-3xl font-bold text-gray-900 text-center">In-Demand Technical Skills</h3>
                 
                 <div className="space-y-6">
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">Full Stack Web Development (MERN & Next.js)</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Job-Ready Full Stack Development</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• HTML, CSS & JavaScript deep dive</li>
-                      <li>• React & Next.js advanced patterns</li>
-                      <li>• Node.js & Express backend</li>
-                      <li>• MongoDB integration & deployment</li>
+                      <li>• Build portfolio projects that land interviews</li>
+                      <li>• Master React, Next.js & modern frameworks</li>
+                      <li>• Deploy production-ready applications</li>
+                      <li>• Create impressive GitHub portfolio</li>
                     </ul>
                   </div>
                   
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">Data Analytics Complete Mastery</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">High-Paying Data Analytics Skills</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• Data preprocessing & cleaning</li>
-                      <li>• Exploratory data analysis</li>
-                      <li>• Visualization with Power BI/Tableau</li>
-                      <li>• SQL & Python for analytics</li>
+                      <li>• Master SQL for 6-figure data roles</li>
+                      <li>• Python data analysis that impresses</li>
+                      <li>• Build dashboards that wow employers</li>
+                      <li>• Analytics projects that get job offers</li>
                     </ul>
                   </div>
                   
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">Data Structures & Algorithms</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Interview-Winning DSA Mastery</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• Comprehensive DSA coverage</li>
-                      <li>• Problem-solving strategies</li>
-                      <li>• Leetcode pattern recognition</li>
-                      <li>• Time & space complexity analysis</li>
+                      <li>• Ace technical interviews at top companies</li>
+                      <li>• Master FAANG-level problem solving</li>
+                      <li>• LeetCode patterns that guarantee success</li>
+                      <li>• System design for senior roles</li>
                     </ul>
                   </div>
                   
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">Introduction to Generative AI</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">AI Skills That Get You Hired</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• Transformer architectures</li>
-                      <li>• Prompt engineering basics</li>
-                      <li>• Building with LLM APIs</li>
-                      <li>• Responsible AI & ethics</li>
+                      <li>• Build AI applications employers need</li>
+                      <li>• Master ChatGPT, Claude & cutting-edge tools</li>
+                      <li>• Create AI-powered portfolio projects</li>
+                      <li>• Stay ahead of the AI job market</li>
                     </ul>
                   </div>
                 </div>
@@ -844,56 +842,56 @@ export default function LandingPage() {
 
               {/* Career Development */}
               <div className="space-y-8">
-                <h3 className="text-3xl font-bold text-gray-900 text-center">Career Development</h3>
+                <h3 className="text-3xl font-bold text-gray-900 text-center">Job Hunt Mastery</h3>
                 
                 <div className="space-y-6">
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">Resume Mastery</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">ATS-Beating Resume Mastery</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• ATS-optimized templates</li>
-                      <li>• Achievement-focused content</li>
-                      <li>• Technical skills highlighting</li>
-                      <li>• Professional summary writing</li>
+                      <li>• Resumes that pass all ATS systems</li>
+                      <li>• Templates with 95%+ interview rates</li>
+                      <li>• Quantify achievements like a pro</li>
+                      <li>• Stand out from 1000+ applicants</li>
                     </ul>
                   </div>
                   
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">LinkedIn Optimization</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">LinkedIn Job Hunting Weapon</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• Profile optimization for recruiters</li>
-                      <li>• Content strategy for visibility</li>
-                      <li>• Connection building tactics</li>
-                      <li>• Engagement best practices</li>
+                      <li>• Turn LinkedIn into your personal recruiter</li>
+                      <li>• Get 5+ recruiter messages per week</li>
+                      <li>• Network your way to hidden jobs</li>
+                      <li>• Content that attracts dream employers</li>
                     </ul>
                   </div>
                   
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">Job Search Automation</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Job Application Automation</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• Automated application tools</li>
-                      <li>• Job board optimization</li>
-                      <li>• Recruiter outreach templates</li>
-                      <li>• Interview scheduling</li>
+                      <li>• Apply to 100+ jobs per day efficiently</li>
+                      <li>• Automate without sacrificing quality</li>
+                      <li>• Track applications like a pro</li>
+                      <li>• Never miss follow-up opportunities</li>
                     </ul>
                   </div>
                   
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">Behavioral Interview Mastery</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Interview Mastery & Salary Negotiation</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• STAR method strategies</li>
-                      <li>• Common behavioral questions</li>
-                      <li>• Storytelling techniques</li>
-                      <li>• Confidence & body language</li>
+                      <li>• Ace any interview with confidence</li>
+                      <li>• Stories that wow every interviewer</li>
+                      <li>• Negotiate 20-40% higher salaries</li>
+                      <li>• Turn interviews into multiple offers</li>
                     </ul>
                   </div>
                   
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">AI Integration for All Backgrounds</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">AI-Powered Job Hunt Arsenal</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• Leveraging AI tools in workflows</li>
-                      <li>• No-code automation basics</li>
-                      <li>• AI-driven decision making</li>
-                      <li>• Ethical considerations</li>
+                      <li>• Use AI to dominate your job search</li>
+                      <li>• Automate repetitive application tasks</li>
+                      <li>• AI-generated cover letters that work</li>
+                      <li>• Stay ahead in the AI-driven job market</li>
                     </ul>
                   </div>
                 </div>
@@ -966,8 +964,8 @@ export default function LandingPage() {
         {/* 100s of Success Stories Globally */}
         <section className="bg-gray-50 section-padding">
           <div className="max-w-7xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl lg:text-5xl font-black text-gray-900">100s of Success Stories Globally</h2>
-            <p className="text-xl text-gray-600">Real testimonials from our premium mentorship program members who transformed their careers</p>
+            <h2 className="text-3xl lg:text-5xl font-black text-gray-900">100s of Job Hunt Success Stories</h2>
+            <p className="text-xl text-gray-600">Real job offers and career transformations from our job hunt program members who landed their dream roles</p>
             
             {/* Grid of Success Story Images */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12">
@@ -1017,17 +1015,16 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Call to Action - COMMENTED OUT */}
-            {/* <div className="mt-12 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Ready to Be Our Next Success Story?</h3>
-              <p className="text-lg mb-6">Join hundreds of professionals who have transformed their careers with our mentorship</p>
+            <div className="mt-12 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Ready to Be Our Next Job Hunt Success?</h3>
+              <p className="text-lg mb-6">Join hundreds of job seekers who have landed their dream roles with our proven job hunt system</p>
               <button 
                 onClick={handleCTAClick}
                 className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
               >
-                Start Your Success Journey
+                Start Your Job Hunt Journey
               </button>
-            </div> */}
+            </div>
           </div>
         </section>
 
@@ -1035,39 +1032,39 @@ export default function LandingPage() {
         <section className="gradient-bg text-white section-padding">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl lg:text-5xl font-black">
-              Ready to Transform Your <span className="text-accent-500">Tech Career?</span>
+              Ready to Land Your <span className="text-accent-500">Dream Tech Job?</span>
             </h2>
             
             <p className="text-xl text-gray-200">
-              Join thousands of successful members who have accelerated their careers with our mentorship program.
+              Join thousands of successful job hunters who have landed high-paying tech roles through our proven job hunt system.
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-6">Membership includes:</h3>
+              <h3 className="text-2xl font-bold mb-6">Your Job Hunt Arsenal includes:</h3>
               <div className="grid md:grid-cols-2 gap-4 text-left">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span>Access to all exclusive features</span>
+                  <span>Complete job hunt support system</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span>Weekly live sessions with FAANG engineers</span>
+                  <span>Weekly job hunt strategy sessions</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span>Personalized career guidance</span>
+                  <span>Personalized job landing roadmap</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span>Resume and LinkedIn profile reviews</span>
+                  <span>ATS-beating resume & LinkedIn optimization</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span>Private premium mentorship program chat access</span>
+                  <span>Private job hunt community access</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span>15+ Tech courses & 5+ Career tracks</span>
+                  <span>15+ Job-ready skills & interview mastery</span>
                 </div>
               </div>
               
@@ -1079,7 +1076,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* <div className="space-y-6">
+            <div className="space-y-6">
               <button 
                 onClick={handleCTAClick}
                 className="btn-primary text-2xl px-12 py-6 mx-auto flex items-center space-x-3"
@@ -1087,11 +1084,11 @@ export default function LandingPage() {
                 <span>Join Now</span>
                 <ArrowRight className="w-8 h-8" />
               </button>
-            </div> */}
+            </div>
 
             {/* Who Can Join */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mt-12">
-              <h3 className="text-2xl font-bold mb-6">Who Can Join Premium Mentorship Program?</h3>
+              <h3 className="text-2xl font-bold mb-6">Who Can Join Our Elite Job Hunt Program?</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-3">
@@ -1134,7 +1131,7 @@ export default function LandingPage() {
 
             <div className="border-t border-white/20 pt-8">
               <p className="text-sm text-gray-400">
-                © 2024 Premium Mentorship Program. Your gateway to tech success with personalized mentorship from industry leaders.
+                © 2024 Elite Job Hunt Program. Your gateway to landing high-paying tech roles with proven job hunt strategies from industry insiders.
               </p>
             </div>
           </div>

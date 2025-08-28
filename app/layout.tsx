@@ -1,11 +1,15 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Jobs, Courses, AI, Mentorship - Crack High Paying Jobs',
-  description: 'Join our private mentorship group and get access to weekly live workshops, 24/7 DM support, 10+ new courses, and 100+ weekly job postings. Built for students and working professionals.',
-  keywords: 'jobs, mentorship, AI courses, tech careers, resume building, interview prep, LinkedIn optimization',
+  title: 'Elite Job Hunt Program - Land Your Dream Tech Job',
+  description: 'Join our elite job hunt program and get access to weekly live workshops, 24/7 job hunt support, 10+ job-ready courses, and 100+ weekly job postings. Built to land high-paying tech roles.',
+  keywords: 'jobs, job hunting, tech careers, resume building, interview prep, LinkedIn optimization, job search, career coaching',
   robots: 'index, follow',
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
